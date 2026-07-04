@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { createEvent } from "../services/api";
 
-export default function EventForm({ setData, setLoading}){
+type Props = {
+  setData: (data: any) => void;
+  setLoading: (loading: boolean) => void;
+};
+
+export default function EventForm({ setData, setLoading}:Props){
     const [form,setForm]= useState({
         name:" ",
         city:" ",
@@ -14,7 +19,7 @@ export default function EventForm({ setData, setLoading}){
     const handleChange= (e)=>{
         setForm({...form, [e.target.name]:e.target.value});
     };
-    const handleSubmit=async (e)=>{
+    const handleSubmit=async (e: React.FormEvent)=>{
         e.preventDefault();
         setLoading(true);
 

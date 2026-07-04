@@ -1,4 +1,8 @@
-export default function VendorList({vendors}){
+type Props = {
+  vendors: any;
+};
+
+export default function VendorList({vendors}:Props){
     if(!vendors) return null;
 
     return(
@@ -11,7 +15,9 @@ export default function VendorList({vendors}){
                         {category}
                     </h3>
 
-                    {vendors[category].map((v, i)=>(
+                    {vendors[category].map((v:any, i: number
+                        
+                    )=>(
                         <div key={i} className="bg-slate-700  p-2 rounded mb-2">
                             <p className="font-medium">{v.name}</p>
                             <p className="text-sm text-gray-400">{v.address}</p>

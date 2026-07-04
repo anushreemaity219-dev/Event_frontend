@@ -1,7 +1,7 @@
 import { useState } from "react";
 import EventForm from "../components/EventForm";
 import EventResult from "../components/EventResult";
-import VendorList from "../components/VendorList";
+
 //import Checklist from "../components/Checklist";
 import Loader from "../components/Loader";
 

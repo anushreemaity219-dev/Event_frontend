@@ -1,6 +1,11 @@
 import VendorList from "./VendorList";
 
-export default function EventResult({data}){
+type Props = {
+  data: any;
+};
+
+
+export default function EventResult({data}:Props){
     if(!data) return null;
 
     return(
